@@ -1,0 +1,131 @@
+/*------------------------*\ 
+|      CONTACT STYLES      |
+\*------------------------*/ 
+.contact {
+
+    padding-bottom: initial;
+
+    .section__border {
+        // background-color: invert(colorByTheme($active-theme, color-primary-light), 100%);
+            background: map-get($greyscale , color-lightgrey);
+     
+        &__decorator{
+        //    background-color: invert(colorByTheme($active-theme, color-primary-light), 100%);
+            background: map-get($greyscale , color-lightgrey);   
+        }
+    }
+    
+    .section__content{
+        height: auto;
+        padding-bottom: 6rem;
+        background-color: colorByTheme($active-theme, color-primary-light);
+        
+        &__heading {
+            color: invert(colorByTheme($active-theme, color-primary-light), 100%);
+            
+        }
+    }
+
+    &__info {
+        display: flex;
+        padding: 0 2rem;
+    }
+
+    &__contact-me{
+        flex: 1;
+        padding: 0 2rem;
+
+        h1{
+            font-size: 4rem;
+            padding-left: 2rem;
+            background-color:rgba(colorByTheme($active-theme, color-primary-dark), .5);
+            color: invert(colorByTheme($active-theme, color-primary-light), 100%);
+        }
+        
+        h2{
+            background-color:rgba(colorByTheme($active-theme, color-primary-dark), .2);
+            color: invert(colorByTheme($active-theme, color-primary-light), 100%);
+            padding-left: .5rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__social-media-box{
+        display: flex;
+        flex: 1;
+        justify-content: space-evenly;
+
+        &__element{
+            font-size: 8rem;
+            color: rgba(colorByTheme($active-theme, color-primary-dark), .5);
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width:1024px){
+    .contact{
+
+        &__contact-me{
+            flex: 1;
+            padding: 0 2rem;
+    
+            h1{
+                font-size: 2.5rem;
+                padding-left: 1rem;
+                background-color:rgba(colorByTheme($active-theme, color-primary-dark), .5);
+            }
+    
+            h2{
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        &__social-media-box{
+            display: flex;
+            flex: 1;
+            justify-content: space-evenly;
+    
+            &__element{
+                font-size: 6rem;
+                margin: 0 1rem;
+            }
+    
+        }
+    }
+}
+
+
+@media screen and (max-width:767px){
+    .contact{
+        &__info{
+            flex-direction: column;
+        }
+
+        &__contact-me{
+            flex: 1;
+            padding: 0 2rem;
+            margin-bottom: 1rem;
+    
+            h1{
+                font-size: 1.8rem;
+                padding-left: initial;
+                text-align: center;
+            }
+            
+            h2{
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+        }
+
+        &__social-media-box{
+            margin-bottom: 2rem;
+        }
+    }
+}
